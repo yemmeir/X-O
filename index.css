@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #234e70;
+}
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 300%;
+  color: #fbf8be;
+}
+#gameboard {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.box {
+  height: 150px;
+  width: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-right: 2px solid #fbf8be;
+  border-bottom: 2px solid #fbf8be;
+}
+.box:nth-child(3n) {
+  border-right: none;
+}
+/*.box:nth-child(0n) {
+  border-left: none;
+}
+.box:nth-child(7n) {
+  border-bottom: none;
+}
+.box:nth-child(8n) {
+  border-bottom: none;
+}
+.box:nth-child(9n) {
+  border-bottom: none;
+}
+*/
+.box:nth-child(6n) ~ .box {
+  /*מגיע לקופסה ה6 ואומר מכאן ואילך תוריד את הקו התחתון*/
+  border-bottom: none;
+}
+.container {
+  padding: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #234e70;
+}
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #e0a96d;
+  border-color: #234e70;
+  transition: 200ms transform;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
